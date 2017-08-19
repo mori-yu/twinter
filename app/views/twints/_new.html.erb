@@ -1,0 +1,16 @@
+<div class="modal fade" id="twint">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        </div>
+        <div class="modal-body">
+            <%= bootstrap_form_for(@twint, url: confirm_twints_path) do |f| %>
+                <%= f.text_area :content, class: "form-control", placeholder: "いま、なにしてる？", maxlength: "140"  %>
+        </div>
+        <div class="modal-footer">
+            <%= f.submit "ツゥイント",class: "btn btn-info" %>
+            <% end %>
+        </div>
+    </div>
+  </div>
+</div>
