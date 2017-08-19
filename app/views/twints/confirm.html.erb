@@ -9,7 +9,11 @@
     <%= bootstrap_form_for(@twint) do |f| %>
       <%= f.hidden_field :content %>
 
-      <p><%= @twint.content %></p>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <p><%= @twint.content %></p>
+        </div>
+      </div>
       <%= f.submit "ツゥイント", class: "btn btn-info" %>
     <% end %>
 　</div>

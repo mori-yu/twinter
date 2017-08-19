@@ -13,9 +13,15 @@ class TwintsController < ApplicationController
         @twint = Twint.new(twints_params)
         if @twint.invalid?
             @twint.errors.full_messages.each do |msg|
+                #これたぶんためだ・・・
+                #複数エラーがあったときの挙動・・・
                 redirect_to twints_path, danger: msg
             end
         end
+    end
+    
+    def edit
+        @twint = Twint.find(params[:id])
     end
     
     private

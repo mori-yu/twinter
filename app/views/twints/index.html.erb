@@ -10,6 +10,20 @@
         <%= msg %>
       </div>
     <% end %>
-    <h1>Pages#index</h1>
+    
+    <div class="twint_list">
+    <% @twints.each do |twint| %>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <%= simple_format(h(twint.content)) %>
+        </div>
+        <div class="panel-footer">
+          <%= link_to "編集", edit_twint_path(twint.id), class: 'btn btn-sm btn-success' %>
+          <%= link_to "削除", twint_path(twint.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-sm btn btn-danger' %>
+        </div>
+      </div>
+    <% end %>
+    </div>
+    
   </div>
 </div>
