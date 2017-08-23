@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'top#index'
   
+  get '/twints/:id', to: 'twints#destroy'
+  
   resources :twints do
     collection do
       post :confirm
