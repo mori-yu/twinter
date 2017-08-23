@@ -12,7 +12,7 @@
     <% end %>
     
     <div class="twint_list">
-    <% @twints.each do |twint| %>
+    <% @twints.reverse_each do |twint| %>
       <div class="panel panel-default">
         <div class="panel-body">
           <%= simple_format(h(twint.content)) %>
