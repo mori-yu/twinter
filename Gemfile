@@ -48,3 +48,5 @@ end
 gem 'bootstrap_form'
 
 gem 'pg', '~> 0.20.0'
+
+gem 'rails_12factor', group: :production
